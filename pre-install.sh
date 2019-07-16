@@ -120,7 +120,7 @@ case "$choice" in
 		dangerous parted "$root_dev" mklabel gpt
 		dangerous parted --align optimal "$root_dev" mkpart boot fat32 0% 512MiB
 		dangerous parted "$root_dev" set 1 esp on
-		dangerous parted --align optimal  mkpart "$root_dev" home 512MiB 100%
+		dangerous parted --align optimal "$root_dev" mkpart home 512MiB 100%
 		dangerous mkfs.fat -F32 "${root_dev}${nvme_flag}1"
 		status_good " > Partitions created"
 		;;

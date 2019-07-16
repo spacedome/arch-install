@@ -1,0 +1,3 @@
+%wheel ALL=(ALL) ALL
+%sudo ALL=(ALL) ALL
+Defaults passwd_timeout=0
